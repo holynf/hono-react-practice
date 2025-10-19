@@ -1,5 +1,6 @@
 import {useState} from 'react'
 import './App.css'
+import {Button} from "@/components/ui/button.tsx"
 
 function App() {
     const [count, setCount] = useState(0)
@@ -7,13 +8,13 @@ function App() {
     return (
         <>
             <h1>Vite + React</h1>
-            <div className="card">
-                <button className={"bg-red-100 p-2"} onClick={() => setCount((count) => count + 1)}>
+            <div className="bg-background">
+                <Button className={"text-foreground"} onClick={() => setCount((count) => count + 1)}>
                     up
-                </button>
-                <button className={"bg-blue-100 p-2"} onClick={() => setCount((count) => count - 1)}>
+                </Button>
+                <Button className={"bg-secondary"} onClick={() => setCount((count) => count - 1)}>
                     down
-                </button>
+                </Button>
                 <p>
                     {count}
                 </p>
